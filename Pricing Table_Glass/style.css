@@ -1,0 +1,313 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  /* min-height: 100vh;
+  background: url(one.png);
+  background-repeat: no-repeat;
+  background-size: cover; */
+  color: white;
+  font-family: Roboto;
+  font-size: 16px;
+}
+
+#main{
+  min-height: 100vh;
+  width: 100%;
+  background: url(one.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* .container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 100%;
+  position: relative;
+} */
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 4%;
+  padding: 12% 0;
+}
+
+.card {
+  padding: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+}
+
+.card_title {
+  font-weight: normal;
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.pricing {
+  font-weight: normal;
+  font-size: 80px;
+}
+
+.pricing .small {
+  font-size: 16px;
+}
+
+hr {
+  margin-top: 10px;
+}
+
+.features {
+  max-height: 200px;
+  overflow-y: scroll;
+  margin: 40px 0;
+  list-style-position: inside;
+}
+
+/*features section scroll*/
+.features::-webkit-scrollbar{
+  width: 5px;
+  height: 5px;
+}
+
+.features::-webkit-scrollbar-track{
+background: none;
+}
+
+.features::-webkit-scrollbar-thumb{
+  background: rgb(180, 178, 178);
+  border-radius: 10px;
+  }
+
+.features li {
+  padding-bottom: 5px;
+}
+
+a.cta_btn {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  background: rgba(21, 23, 24, 0.7);
+  border-radius: 29px;
+  padding: 20px 0;
+  color: white;
+  text-decoration: none;
+  letter-spacing: 2px;
+  transition: background .3s ease;
+}
+
+a.cta_btn:hover {
+  background: #000;
+}
+.link {
+  position: fixed;
+  background-color: #D12322;
+  padding: 23px 40px;
+  right: -99px;
+  border-radius: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  transform: rotate(-90deg);
+  font-size: 18px;
+  font-weight: 500;
+  color: #FFF;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all .1s ease-in-out;
+}
+
+.link i {
+  padding-left: 7px;
+}
+
+.link:hover {
+  text-decoration: underline;
+  background-color: black;
+}
+@media only screen and (max-width: 1024px) {
+  .grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 2%;
+
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .grid {
+      grid-template-columns: 1fr;
+      gap: 2%;
+      padding-bottom: 25%;
+  }
+
+  .container {
+      padding: 0 1rem;
+  }
+
+  body {
+      font-size: 14px;
+  }
+
+  .card {
+      padding: 30px;
+  }
+
+  .card_title {
+      font-size: 24px;
+      margin-bottom: 12px;
+  }
+
+  .pricing {
+      font-size: 52px;
+  }
+
+  hr {
+      margin-top: 50px;
+  }
+
+  a.cta_btn {
+      font-size: 11px;
+  }
+}
+
+/*Toggle*/
+.top {
+  padding-top: 50px;
+  padding-bottom: 20px;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #1e2321;
+  -webkit-transition: 0.4s;
+
+  /* box-shadow: 2px 4px 10px #1e2321; */
+  transform: translate(0px, 0px);
+  transition: 0.6s ease transform, 0.6s box-shadow;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #4880FB;
+  transition:0.5s;
+}
+
+input:focus + .slider {
+  /* box-shadow: 0 0 1px #50bfe6; */
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+/*Accordion*/
+.accordion{
+top:0;
+}
+
+.accordion .contentBx{
+  position: relative;
+  margin: 10px, 20px;
+}
+
+.accordion .contentBx .label{
+  position: relative;
+  padding: 10px;
+  background: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+div.content::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+}
+
+.accordion .contentBx .label::before{
+  content: "+";
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  font-size: 1.5em;
+}
+
+.accordion .contentBx.active .label::before{
+content:"-";
+}
+
+.accordion .contentBx .content{
+  position: relative;
+  background: none;
+  height: 0;
+  overflow-y: hidden;
+  transition: 0.5s;
+  overflow-y: auto;
+}
+
+.accordion .contentBx.active .content{
+height: 100px;
+padding: 5px;
+}
+
+.content ol{
+  padding-left:15px ;
+}
+
+.card-wrapper .card{
+  width: 100%;
+}

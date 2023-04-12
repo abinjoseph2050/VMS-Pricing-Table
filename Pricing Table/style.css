@@ -1,0 +1,284 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+body {
+  background-color: #f4f4f4;
+
+  font-family: "Play", sans-serif;
+}
+
+.container {
+  width: 100%;
+}
+
+.packages {
+  margin: 20px;
+  width: 300px;
+  padding-bottom: 1.5em;
+  height: 100%;
+  background-color: #a8b9dd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition: all 0.3s ease 0s;
+
+}
+
+.packages:hover{
+
+    transform: scale(1.1);
+    /* transition: 0.4s; */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;}
+
+h1,
+h2 {
+  font-size: 2em;
+}
+
+.list li {
+  font-size: 20px;
+  list-style: none;
+  /* border-bottom: 1px solid #f4f4f4; */
+  padding-inline-start: 0;
+  border-width: 1px;
+  padding: 5px;
+}
+
+.first {
+  margin-top: 20px;
+  /* border-top: 1px solid #f4f4f4; */
+}
+
+.list {
+  width: 80%;
+  min-height: 200px;
+  max-height: 240px;
+  overflow-y: scroll;
+}
+
+.list::-webkit-scrollbar{
+    width: 5px;
+    height: 5px;
+}
+.list::-webkit-scrollbar-thumb {
+    background: #5f6e8d;
+    border-radius: 10px;
+
+  }
+
+ol,
+ul {
+  padding: 0;
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input,
+label {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 10px 0;
+}
+
+.button {
+  padding: 10px 30px;
+  text-decoration: none;
+  font-size: 1.4em;
+  margin: 15px 15px;
+  border-radius: 50px;
+  color: #f4f4f4;
+  transition: all 0.3s ease 0s;
+}
+
+.button:hover {
+  transform: scale(1.2);
+}
+
+.button1 {
+  background-color: #4880FB;
+  /* box-shadow: 0 0 5px 0 #00cc99 inset, 0 0 5px 2px #00cc99; */
+}
+
+.button2 {
+  background-color: #4880FB;
+  /* box-shadow: 0 0 10px 0 #ff007c inset, 0 0 20px 2px #ff007c; */
+}
+
+.button3 {
+  background-color: #4880FB;
+  /* box-shadow: 0 0 10px 0 #ffae42 inset, 0 0 20px 2px #ffae42; */
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #1e2321;
+  -webkit-transition: 0.4s;
+
+  /* box-shadow: 2px 4px 10px #1e2321; */
+  transform: translate(0px, 0px);
+  transition: 0.6s ease transform, 0.6s box-shadow;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #4880FB;
+  transition:0.5s;
+}
+
+input:focus + .slider {
+  /* box-shadow: 0 0 1px #50bfe6; */
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.package-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+/*show more*/
+#more{
+    transition: 0.5s;
+}
+
+.list span{
+display: none;    background-color: red;
+}
+
+#myBtn, #myBtn2, #myBtn3{
+    color: #4880FB;
+    cursor: pointer;
+}
+
+li a{
+  background:none;
+  border:none;
+  color: black;
+  text-decoration: none;;
+}
+
+li a:hover{
+  background:none;
+  border:none;
+  color: black;
+  text-decoration: none;;
+}
+
+/*dropdown*/
+.dropbtn {
+  background: none;
+  color: black;
+  /* padding: 16px; */
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 120px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 5px 5px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+/*collapse*/
+
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background: #bedfe8;
+}
+
+.accordion{
+  
+}
